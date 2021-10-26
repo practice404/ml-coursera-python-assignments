@@ -156,7 +156,6 @@ def checkNNGradients(nnCostFunction, lambda_=0):
                                         num_labels, X, y, lambda_)
     cost, grad = costFunc(nn_params)
     numgrad = computeNumericalGradient(costFunc, nn_params)
-
     # Visually examine the two gradient computations.The two columns you get should be very similar.
     print(np.stack([numgrad, grad], axis=1))
     print('The above two columns you get should be very similar.')
